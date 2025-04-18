@@ -6,3 +6,6 @@ class Credential(models.Model):
     website_url = models.URLField(max_length=255)
     login = models.CharField(max_length=255)
     encrypted_password = models.TextField(max_length=255)
+
+    def __str__(self):
+        return f"{self.website_urk} ({self.login})"
