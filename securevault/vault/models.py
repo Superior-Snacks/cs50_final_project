@@ -8,4 +8,4 @@ class Credential(models.Model):
     encrypted_password = models.TextField(max_length=255)
 
     def __str__(self):
-        return f"{self.website_urk} ({self.login})"
+        return f"{self.website_url} ({self.login})"
