@@ -4,3 +4,4 @@ final project for the cs50 harvard thingy
 this will create secure passwords and optional burner emails
 fill in password and emails
 don't know about mobile maynbe just provide a list for websites, usernames and passwords
+passkey maybe?
