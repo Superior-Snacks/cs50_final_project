@@ -10,6 +10,8 @@ def login(request):
             user = form.get_user()
             login(request, user)
             return render(request, "vault/vault.html")
+        else:
+            return render(request, "vault/login.html")
 
 
 
