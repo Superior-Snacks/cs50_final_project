@@ -9,6 +9,7 @@ def login(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
+            return render(request, "vault/vault.html")
 
 
 
@@ -19,7 +20,7 @@ def register(request):
             user = form.save()
             login(request, user)
         else:
-            return render(request, "vault.register.html")
+            return render(request, "vault/register.html")
 
 def logout():
     ...
