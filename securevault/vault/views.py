@@ -24,5 +24,5 @@ def register(request):
         else:
             return render(request, "vault/register.html")
 
-def logout():
-    ...
+def logout(request):
+    if request.method 
