@@ -27,3 +27,4 @@ def register(request):
 def logout(request):
     if request.method == "POST":
         logout(request)
+        return render(request, "vault/login.html")
