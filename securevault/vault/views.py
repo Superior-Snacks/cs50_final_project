@@ -26,3 +26,4 @@ def register(request):
 
 def logout(request):
     if request.method == "POST":
+        logout(request)
