@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def login(request):
@@ -29,10 +30,11 @@ def logout(request):
         logout(request)
         return render(request, "vault/login.html")
 
-
+@login_required
 def vault(request):
     if request.method == "POST":
         form = AuthenticationForm(data = request.POST)
         if form.is_valid():
             user = form.get_user()
+            if 
     return render(request, "vault/vault.html")
