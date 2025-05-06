@@ -5,14 +5,15 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def login(request):
-    form = AuthenticationForm(data = request.POST)
-    if form.is_valid():
-        user = form.get_user()
-        login(request, user)
-        return render(request, "vault/vault.html")
-    else:
-        return render(request, "vault/login.html")
-    
+    if request.method == "POST":
+        form = AuthenticationForm(data = request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return render(request, "vault/vault.html")
+        else:
+            return render(request, "vault/login.html")
+
 def login_view(request):
     return render(request, "vault/login.html")
 
@@ -31,6 +32,11 @@ def logout(request):
         logout(request)
         return render(request, "vault/login.html")
 
-@login_required
+@login_reqierd
 def vault(request):
+    if request.method == "POST":
+        form = AuthenticationForm(data = request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            if 
     return render(request, "vault/vault.html")
