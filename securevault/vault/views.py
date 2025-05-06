@@ -5,14 +5,13 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def login(request):
-    if request.method == "POST":
-        form = AuthenticationForm(data = request.POST)
-        if form.is_valid():
-            user = form.get_user()
-            login(request, user)
-            return render(request, "vault/vault.html")
-        else:
-            return render(request, "vault/login.html")
+    form = AuthenticationForm(data = request.POST)
+    if form.is_valid():
+        user = form.get_user()
+        login(request, user)
+        return render(request, "vault/vault.html")
+    else:
+        return render(request, "vault/login.html")
 
 
 def register(request):
