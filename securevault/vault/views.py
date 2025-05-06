@@ -12,7 +12,9 @@ def login(request):
         return render(request, "vault/vault.html")
     else:
         return render(request, "vault/login.html")
-
+    
+def login_view(request):
+    return render(request, "vault/login.html")
 
 def register(request):
     if request.method == "POST":
