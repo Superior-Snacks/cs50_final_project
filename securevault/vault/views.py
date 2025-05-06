@@ -14,7 +14,6 @@ def login(request):
             return render(request, "vault/login.html")
 
 
-
 def register(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
@@ -24,10 +23,12 @@ def register(request):
         else:
             return render(request, "vault/register.html")
 
+
 def logout(request):
     if request.method == "POST":
         logout(request)
         return render(request, "vault/login.html")
-    
+
+
 def vault(request):
     return render(request, "vault/vault.html")
