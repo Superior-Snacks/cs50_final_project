@@ -23,6 +23,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
+            return render(request, "vault/vault.html")
         else:
             return render(request, "vault/register.html")
 
