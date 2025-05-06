@@ -35,6 +35,6 @@ def logout(request):
         logout(request)
         return render(request, "vault/login.html")
 
-@login_required
+#@login_required
 def vault(request):
     return render(request, "vault/vault.html")
