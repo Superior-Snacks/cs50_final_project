@@ -26,6 +26,8 @@ def register(request):
         else:
             return render(request, "vault/register.html")
 
+def register_view(request):
+    return render(request, "vault/register.html")
 
 def logout(request):
     if request.method == "POST":
