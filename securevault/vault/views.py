@@ -28,3 +28,6 @@ def logout(request):
     if request.method == "POST":
         logout(request)
         return render(request, "vault/login.html")
+    
+def vault(request):
+    return render(request, "vault/vault.html")
