@@ -8,5 +8,9 @@ extention using selenium maybe
 
 --web app--
 manage pass and view urls
+create strong
 
 --extent--
+when sellect input form promt creation
+auto fill when possible
+right click pull upp list maybe
