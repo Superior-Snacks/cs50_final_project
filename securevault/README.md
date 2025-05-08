@@ -15,3 +15,8 @@ hide key -- importande never show
 when sellect input form promt creation
 auto fill when possible
 right click pull upp list maybe
+manifest
+popup html
+popup js
+background js api storage
+content js
