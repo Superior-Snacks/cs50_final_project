@@ -12,7 +12,8 @@ def login(request):
             login(request, user)
             return render(request, "vault/vault.html")
         else:
-            return render(request, "vault/login.html")
+            return render(request, "vault/login.html", {'form': form})
+
 
 def login_view(request):
     return render(request, "vault/login.html")
@@ -25,7 +26,7 @@ def register(request):
             login(request, user)
             return render(request, "vault/vault.html")
         else:
-            return render(request, "vault/register.html")
+            return render(request, "vault/register.html", {'form': form})
 
 def register_view(request):
     return render(request, "vault/register.html")
